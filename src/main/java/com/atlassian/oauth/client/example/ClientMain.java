@@ -6,9 +6,7 @@ import java.util.List;
 public class ClientMain {
 
     public static void main(String[] args) throws Exception {
-        if (args.length == 0) {
-            throw new IllegalArgumentException("No command specified. Use one of " + Command.names());
-        }
+        String args[] =  {"request",""};
 
         PropertiesClient propertiesClient = new PropertiesClient();
         JiraOAuthClient jiraOAuthClient = new JiraOAuthClient(propertiesClient);
